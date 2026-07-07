@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case study — Yolda</title>
+  <meta name="description" content="A Yolda delivery service, up close." />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Vazirmatn:wght@300;400;500;600&family=Markazi+Text:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="project">
+
+  <div class="loader loader--quick" id="loader">
+    <div class="loader__inner">
+      <img class="loader__logo" src="assets/logo.svg" alt="Yolda" />
+      <div class="loader__count"><span id="loaderCount">0</span></div>
+    </div>
+  </div>
+
+  <div class="transition" id="transition"><img src="assets/logo.svg" alt="" /></div>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"><span data-i18n="explore">Explore</span></div>
+
+  <header class="nav">
+    <a href="index.html" class="nav__logo" data-hover data-transition>
+      <img src="assets/logo.svg" alt="Yolda" />
+      <span>YOLDA</span>
+    </a>
+    <nav class="nav__links">
+      <a href="index.html" class="nav__link" data-hover data-transition data-i18n="nav.deliveries">Deliveries</a>
+      <a href="about.html" class="nav__link" data-hover data-transition data-i18n="nav.about">About</a>
+      <a href="waitlist.html" class="nav__link nav__link--cta" data-hover data-transition data-i18n="nav.waitlist">Waitlist</a>
+    </nav>
+  </header>
+
+  <main class="scroll" id="scroll">
+
+    <section class="ph section">
+      <div class="ph__media"><canvas id="phCanvas"></canvas></div>
+      <h1 class="ph__title">
+        <span class="line"><span data-split id="phLine1"></span></span>
+        <span class="line"><span data-split id="phLine2"></span></span>
+      </h1>
+      <p class="ph__cat reveal" id="phCat"></p>
+    </section>
+
+    <section class="pmeta section" id="pMeta"></section>
+
+    <section class="pintro section">
+      <p class="pintro__text reveal" id="pIntro"></p>
+    </section>
+
+    <section class="pgal section">
+      <div class="pgal__item pgal__item--a" data-parallax="0.08"><canvas id="galA"></canvas></div>
+      <div class="pgal__item pgal__item--b" data-parallax="-0.06"><canvas id="galB"></canvas></div>
+    </section>
+
+    <section class="pquote section">
+      <p class="pquote__text"><span class="line"><span data-split id="pQuote"></span></span></p>
+    </section>
+
+    <section class="pbody section" id="pBody"></section>
+
+    <section class="pstats section" id="pStats"></section>
+
+    <section class="pnext section">
+      <p class="pnext__label reveal" data-i18n="next.label">Next delivery</p>
+      <a class="pnext__link" id="pNext" data-hover data-transition href="#">
+        <span class="line"><span data-split id="pNextTitle"></span></span>
+      </a>
+    </section>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/project.js"></script>
+</body>
+</html>

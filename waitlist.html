@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waitlist — Yolda</title>
+  <meta name="description" content="Join the Yolda waitlist and be first when the golden couriers reach your city." />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Vazirmatn:wght@300;400;500;600&family=Markazi+Text:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="waitlist">
+
+  <div class="loader loader--quick" id="loader">
+    <div class="loader__inner">
+      <img class="loader__logo" src="assets/logo.svg" alt="Yolda" />
+      <div class="loader__count"><span id="loaderCount">0</span></div>
+    </div>
+  </div>
+
+  <div class="transition" id="transition"><img src="assets/logo.svg" alt="" /></div>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"><span data-i18n="explore">Explore</span></div>
+
+  <header class="nav">
+    <a href="index.html" class="nav__logo" data-hover data-transition>
+      <img src="assets/logo.svg" alt="Yolda" />
+      <span>YOLDA</span>
+    </a>
+    <nav class="nav__links">
+      <a href="index.html" class="nav__link" data-hover data-transition data-i18n="nav.deliveries">Deliveries</a>
+      <a href="about.html" class="nav__link" data-hover data-transition data-i18n="nav.about">About</a>
+      <a href="waitlist.html" class="nav__link nav__link--cta is-active" data-hover data-i18n="nav.waitlist">Waitlist</a>
+    </nav>
+  </header>
+
+  <main class="scroll" id="scroll">
+
+    <section class="wl section">
+      <div class="wl__grid">
+
+        <div class="wl__copy">
+          <p class="wl__label reveal" data-i18n="wl.label">Before everyone else</p>
+          <h1 class="wl__title">
+            <span class="line"><span data-split data-i18n="wl.t1">Join the</span></span>
+            <span class="line"><span data-split data-i18n="wl.t2"><em>golden</em> list.</span></span>
+          </h1>
+          <p class="wl__intro reveal" data-i18n="wl.p">
+            Yolda opens city by city. Leave your details and be first in line when
+            the golden couriers reach yours — early members get their first three
+            deliveries free.
+          </p>
+
+          <form class="wl-form reveal" id="wlForm" novalidate>
+            <div class="wl-form__field">
+              <label for="wlName" data-i18n="wl.name">Full name</label>
+              <input type="text" id="wlName" name="name" autocomplete="name" />
+            </div>
+            <div class="wl-form__field">
+              <label for="wlEmail" data-i18n="wl.email">Email</label>
+              <input type="email" id="wlEmail" name="email" autocomplete="email" />
+            </div>
+            <div class="wl-form__row">
+              <div class="wl-form__field">
+                <label for="wlCity" data-i18n="wl.city">City</label>
+                <input type="text" id="wlCity" name="city" autocomplete="address-level2" />
+              </div>
+              <div class="wl-form__field">
+                <label for="wlService" data-i18n="wl.service">What should we carry first?</label>
+                <select id="wlService" name="service"></select>
+              </div>
+            </div>
+            <p class="wl-form__error" id="wlError" data-i18n="wl.error" hidden>Please enter your name and a valid email.</p>
+            <button type="submit" class="wl-form__submit" data-hover>
+              <span data-i18n="wl.submit">Join the waitlist</span>
+            </button>
+            <p class="wl-form__note" data-i18n="wl.note">No spam — one golden email when we arrive.</p>
+          </form>
+
+          <div class="wl-success" id="wlSuccess" hidden>
+            <img src="assets/logo.svg" alt="" class="wl-success__logo" />
+            <h2 data-i18n="wl.success.t">You're on the list.</h2>
+            <p data-i18n="wl.success.p">Keep an eye on the sky — a golden wing is headed your way.</p>
+          </div>
+        </div>
+
+        <div class="wl__art reveal"><canvas id="wlCanvas"></canvas></div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/project.js"></script>
+  <script src="js/waitlist.js"></script>
+</body>
+</html>

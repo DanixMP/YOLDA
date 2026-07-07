@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Yolda</title>
+  <meta name="description" content="Yolda means 'on the way'. Meet the golden courier." />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Vazirmatn:wght@300;400;500;600&family=Markazi+Text:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="about">
+
+  <div class="loader loader--quick" id="loader">
+    <div class="loader__inner">
+      <img class="loader__logo" src="assets/logo.svg" alt="Yolda" />
+      <div class="loader__count"><span id="loaderCount">0</span></div>
+    </div>
+  </div>
+
+  <div class="transition" id="transition"><img src="assets/logo.svg" alt="" /></div>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"><span data-i18n="explore">Explore</span></div>
+
+  <header class="nav">
+    <a href="index.html" class="nav__logo" data-hover data-transition>
+      <img src="assets/logo.svg" alt="Yolda" />
+      <span>YOLDA</span>
+    </a>
+    <nav class="nav__links">
+      <a href="index.html" class="nav__link" data-hover data-transition data-i18n="nav.deliveries">Deliveries</a>
+      <a href="about.html" class="nav__link is-active" data-hover data-i18n="nav.about">About</a>
+      <a href="waitlist.html" class="nav__link nav__link--cta" data-hover data-transition data-i18n="nav.waitlist">Waitlist</a>
+    </nav>
+  </header>
+
+  <main class="scroll" id="scroll">
+
+    <section class="ab section">
+      <div class="ab__grid">
+        <div class="ab__portrait reveal"><canvas id="abCanvas"></canvas></div>
+        <div class="ab__copy">
+          <h1 class="ab__title">
+            <span class="line"><span data-split data-i18n="ab.t1">«Yolda» means</span></span>
+            <span class="line"><span data-split data-i18n="ab.t2"><em>on the way</em>.</span></span>
+          </h1>
+          <p class="ab__text reveal" data-i18n="ab.p1">
+            We started with one bike, one phone and one promise: nothing golden
+            should ever arrive late. Today Yolda is a fleet of couriers who treat
+            your dinner, your groceries and your grandmother's parcel like treasure.
+          </p>
+          <p class="ab__text reveal" data-i18n="ab.p2">
+            The wing on our Y is not decoration — it's a promise of motion.
+            Rain, midnight, holidays: somewhere in your city, a golden courier
+            is already on the way.
+          </p>
+          <div class="ab__links reveal">
+            <a href="#" data-hover>Instagram</a>
+            <a href="#" data-hover>Twitter / X</a>
+            <a href="#" data-hover>LinkedIn</a>
+            <a href="mailto:hello@yolda.app" data-hover>hello@yolda.app</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="abvals section">
+      <div class="value reveal">
+        <span class="value__num" data-digits>01</span>
+        <h3 data-i18n="val1.h">Speed is respect</h3>
+        <p data-i18n="val1.p">Your time is the most expensive thing we carry. Twelve minutes, on average, door to door.</p>
+      </div>
+      <div class="value reveal">
+        <span class="value__num" data-digits>02</span>
+        <h3 data-i18n="val2.h">Golden hands</h3>
+        <p data-i18n="val2.p">Every courier is trained to handle each order like it's wrapped in gold leaf — because to someone, it is.</p>
+      </div>
+      <div class="value reveal">
+        <span class="value__num" data-digits>03</span>
+        <h3 data-i18n="val3.h">Always on the way</h3>
+        <p data-i18n="val3.p">Rain, midnight, holidays. Motion is the brand; the rest is delivery.</p>
+      </div>
+    </section>
+
+    <section class="pnext section">
+      <p class="pnext__label reveal" data-i18n="ab.next.label">Seen enough?</p>
+      <a class="pnext__link" data-hover data-transition href="index.html">
+        <span class="line"><span data-split data-i18n="ab.next.link">Back to <em>deliveries</em> →</span></span>
+      </a>
+    </section>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/project.js"></script>
+</body>
+</html>

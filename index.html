@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yolda — On the way, always</title>
+  <meta name="description" content="Yolda is the delivery experience you didn't know you needed — until today." />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Vazirmatn:wght@300;400;500;600&family=Markazi+Text:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="home">
+
+  <!-- Preloader -->
+  <div class="loader" id="loader">
+    <div class="loader__inner">
+      <img class="loader__logo" src="assets/logo.svg" alt="Yolda" />
+      <div class="loader__count"><span id="loaderCount">0</span></div>
+    </div>
+  </div>
+
+  <!-- Page transition overlay -->
+  <div class="transition" id="transition"><img src="assets/logo.svg" alt="" /></div>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"><span data-i18n="explore">Explore</span></div>
+
+  <!-- WebGL slide canvas -->
+  <canvas id="gl"></canvas>
+
+  <!-- Fixed chrome -->
+  <header class="nav">
+    <a href="index.html" class="nav__logo" data-hover>
+      <img src="assets/logo.svg" alt="Yolda" />
+      <span>YOLDA</span>
+    </a>
+    <nav class="nav__links">
+      <a href="index.html" class="nav__link is-active" data-hover data-i18n="nav.deliveries">Deliveries</a>
+      <a href="about.html" class="nav__link" data-hover data-transition data-i18n="nav.about">About</a>
+      <a href="waitlist.html" class="nav__link nav__link--cta" data-hover data-transition data-i18n="nav.waitlist">Waitlist</a>
+    </nav>
+  </header>
+
+  <!-- Slides (titles/labels overlay the GL plane; built order matches YOLDA.SERVICES) -->
+  <div class="slider" id="slider" aria-live="polite"></div>
+
+  <!-- Left: current index -->
+  <div class="hud hud--index">
+    <span class="hud__roller"><span id="idxCurrent">01</span></span>
+    <span class="hud__sep"></span>
+    <span id="idxTotal">04</span>
+  </div>
+
+  <!-- Right: progress rail -->
+  <div class="hud hud--rail">
+    <span class="rail" id="rail"></span>
+  </div>
+
+  <!-- Bottom-left: scroll hint -->
+  <div class="hud hud--hint">
+    <span class="hint__line"></span>
+    <span data-i18n="hint">Scroll to discover</span>
+  </div>
+
+  <!-- Bottom-right: tagline -->
+  <div class="hud hud--tag" data-i18n="tag">On the way, always — Yolda® 2026</div>
+
+  <script src="js/data.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/slider.js"></script>
+</body>
+</html>

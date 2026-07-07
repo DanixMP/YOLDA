@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="goldMain" x1="40" y1="20" x2="160" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f9e29c"/>
+      <stop offset="0.35" stop-color="#e8c15c"/>
+      <stop offset="0.65" stop-color="#c99a2e"/>
+      <stop offset="1" stop-color="#9a6f1b"/>
+    </linearGradient>
+    <linearGradient id="goldLight" x1="60" y1="30" x2="140" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff3c4"/>
+      <stop offset="1" stop-color="#e0b34a"/>
+    </linearGradient>
+    <linearGradient id="goldDark" x1="80" y1="60" x2="150" y2="190" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b98c25"/>
+      <stop offset="1" stop-color="#7a5510"/>
+    </linearGradient>
+    <linearGradient id="wing" x1="20" y1="60" x2="90" y2="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f6da8b"/>
+      <stop offset="1" stop-color="#a87c1d"/>
+    </linearGradient>
+  </defs>
+  <!-- wing feathers -->
+  <polygon points="18,52 78,74 70,84 26,72" fill="url(#wing)"/>
+  <polygon points="26,74 80,90 73,99 34,92" fill="url(#wing)" opacity="0.9"/>
+  <polygon points="36,95 82,105 76,113 44,110" fill="url(#wing)" opacity="0.8"/>
+  <!-- Y left arm -->
+  <polygon points="62,26 96,52 96,118 74,96 62,60" fill="url(#goldLight)"/>
+  <polygon points="62,26 96,52 108,44 78,20" fill="url(#goldMain)"/>
+  <!-- Y right arm -->
+  <polygon points="150,18 150,86 122,110 122,60" fill="url(#goldMain)"/>
+  <polygon points="150,18 122,60 108,44 132,22" fill="url(#goldLight)"/>
+  <polygon points="150,86 122,110 122,124 150,100" fill="url(#goldDark)"/>
+  <!-- Y stem -->
+  <polygon points="96,92 122,110 122,168 96,146" fill="url(#goldMain)"/>
+  <polygon points="122,110 150,100 150,120 122,132" fill="url(#goldDark)"/>
+  <polygon points="96,146 122,168 122,184 104,160" fill="url(#goldDark)"/>
+  <!-- stem highlight -->
+  <polygon points="96,92 96,146 88,132 88,98" fill="url(#goldLight)" opacity="0.85"/>
+</svg>
